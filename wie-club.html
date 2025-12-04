@@ -1,200 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women in Engineering - RIT Dubai</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="club-pages.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Women in Engineering (WIE) — RIT Dubai</title>
+<style>
+  :root{
+    --content-width: 980px;
+    --muted:#6a6a6a;
+    --link:#0645ad;
+    --orange:#ff8a00;
+    --infobg:#f8f9fa;
+    --border:#d0d0d0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  body{
+    background:#f2f2f2;
+    color:#111;
+    margin:0;
+    padding:24px 16px;
+    display:flex;
+    justify-content:center;
+  }
+  .page{
+    width:min(var(--content-width),100%);
+    background:#fff;
+    border:1px solid var(--border);
+    box-shadow:0 2px 6px rgba(0,0,0,0.06);
+    padding:22px 28px;
+  }
+
+  h1{
+    font-size:32px;
+    margin:0 0 6px 0;
+    color:var(--orange);
+    line-height:1.1;
+  }
+  .byline{
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:10px;
+  }
+  .lead{
+    font-size:16px;
+    margin-bottom:14px;
+  }
+
+  .article{
+    display:grid;
+    grid-template-columns:1fr 320px;
+    gap:26px;
+    align-items:start;
+  }
+  .content{ max-width:700px; }
+
+  .toc{
+    border:1px solid var(--border);
+    background:#fbfbfb;
+    padding:10px;
+    font-size:14px;
+    margin-bottom:12px;
+  }
+  .toc h2{ font-size:13px; margin:0 0 8px 0; }
+  .toc a{
+    text-decoration:none;
+    color:var(--link);
+    display:block;
+    padding:3px 0;
+  }
+
+  h2{ font-size:20px; margin-top:18px; margin-bottom:8px; }
+  h3{ font-size:16px; margin-top:14px; margin-bottom:6px; }
+  p{ line-height:1.6; margin:8px 0; color:#222; }
+  ul{ margin:6px 0 12px 20px; color:#222; }
+  li{ margin:6px 0; }
+  a{ color:var(--link); }
+
+  .infobox{
+    border:1px solid var(--border);
+    background:var(--infobg);
+    padding:12px;
+    font-size:14px;
+    line-height:1.4;
+  }
+  .infobox h3{ margin:0 0 10px 0; font-size:16px; }
+  .infobox img{ width:100%; height:auto; border-radius:6px; margin-bottom:10px; }
+  .label{ color:var(--muted); font-size:13px; margin-top:8px; }
+
+  .references{
+    font-size:13px;
+    margin-top:18px;
+    border-top:1px solid var(--border);
+    padding-top:12px;
+    color:var(--muted);
+  }
+
+  @media(max-width:900px){
+    .article{ grid-template-columns:1fr; }
+    .infobox{ order:2; margin-top:18px; }
+  }
+</style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FFFFFF'/%3E%3Ctext x='50' y='65' font-size='35' font-weight='bold' text-anchor='middle' fill='%23FF6B35'%3ERIT%3C/text%3E%3C/svg%3E" alt="RIT">
-                <span>CLUBS OF RIT</span>
-            </a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="index.html#clubs" class="nav-link">All Clubs</a></li>
-                <li><a href="index.html#about" class="nav-link">About</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+  <article class="page" role="main" aria-labelledby="page-title">
 
-    <!-- Club Hero -->
-    <section class="club-hero wie-hero">
-        <div class="club-hero-content">
-            <div class="club-badge">💪</div>
-            <h1>Women in Engineering</h1>
-            <p class="club-tagline">From Blueprint to Pitch - Inspiring Future Leaders</p>
-            <div class="club-meta">
-                <span class="meta-item"><span class="meta-icon">📂</span> STEM & Empowerment</span>
-                <span class="meta-item"><span class="meta-icon">🔗</span> IEEE Affinity Group</span>
-            </div>
-        </div>
-        <div class="hero-wave">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-            </svg>
-        </div>
-    </section>
+    <header>
+      <h1 id="page-title">Women in Engineering (WIE)</h1>
+      <div class="byline">RIT Dubai — IEEE Affinity Group</div>
+      <p class="lead">
+        A supportive IEEE affinity group dedicated to empowering women in STEM by creating an inclusive
+        space for learning, collaboration, and growth. WIE at RIT Dubai focuses on inspiring and uplifting
+        the next generation of women leaders, driving positive change in engineering and beyond.
+      </p>
+    </header>
 
-    <!-- Main Content -->
-    <main class="club-main">
-        <div class="container">
-            <div class="club-layout">
-                <!-- Sidebar -->
-                <aside class="club-sidebar">
-                    <div class="sidebar-card">
-                        <h3>Quick Facts</h3>
-                        <ul class="fact-list">
-                            <li><strong>Founded:</strong> 2015</li>
-                            <li><strong>Members:</strong> 120+</li>
-                            <li><strong>Meetings:</strong> Bi-weekly</li>
-                            <li><strong>Affiliation:</strong> IEEE</li>
-                        </ul>
-                    </div>
-                    <div class="sidebar-card">
-                        <h3>Connect With Us</h3>
-                        <div class="social-buttons">
-                            <a href="#" class="social-btn instagram">📷 Instagram</a>
-                            <a href="#" class="social-btn linkedin">💼 LinkedIn</a>
-                            <a href="#" class="social-btn email">📧 Email Us</a>
-                        </div>
-                    </div>
-                    <div class="sidebar-card highlight-card wie-highlight">
-                        <h3>🎀 Get To Know Us!</h3>
-                        <p>Learn about our reward system, make friendship bracelets, and join the board!</p>
-                    </div>
-                    <div class="sidebar-card">
-                        <h3>Related Clubs</h3>
-                        <ul class="related-clubs">
-                            <li><a href="ai-robotics-club.html">AI & Robotics Club</a></li>
-                            <li><a href="graphic-design-club.html">Graphic Design Club</a></li>
-                        </ul>
-                    </div>
-                </aside>
+    <div class="article">
+      <div class="content">
 
-                <!-- Main Content Area -->
-                <div class="club-content">
-                    <section class="content-section">
-                        <h2>About Us</h2>
-                        <p>Women in Engineering (WIE) is a supportive IEEE affinity group dedicated to empowering women in STEM by creating an inclusive space for learning, collaboration, and growth. We believe that diversity drives innovation and excellence in engineering.</p>
-                        <p>Our club provides mentorship, professional development, and networking opportunities that help women thrive in technical fields. We welcome allies and supporters who share our vision of gender equality in STEM.</p>
-                    </section>
+        <nav class="toc" aria-label="Table of contents">
+          <h2>Contents</h2>
+          <a href="#overview">1. Overview</a>
+          <a href="#mission">2. Mission</a>
+          <a href="#activities">3. Activities & Workshops</a>
+          <a href="#events">4. Major Events</a>
+          <a href="#impact">5. Impact</a>
+          <a href="#references">6. References</a>
+        </nav>
 
-                    <section class="content-section">
-                        <h2>Our Mission</h2>
-                        <div class="mission-box wie-mission">
-                            <p>"To inspire and uplift the next generation of women leaders, driving positive change in engineering and beyond."</p>
-                        </div>
-                    </section>
+        <section id="overview">
+          <h2>Overview</h2>
+          <p>
+            Women in Engineering (WIE) at RIT Dubai is a student-led IEEE affinity group that supports,
+            motivates, and connects women pursuing engineering and technology fields. The club provides
+            opportunities for professional development, community building, and technical growth.
+          </p>
+        </section>
 
-                    <section class="content-section">
-                        <h2>Club Activities</h2>
-                        <div class="activities-grid">
-                            <div class="activity-card">
-                                <div class="activity-icon">🎓</div>
-                                <h4>Workshops & Skill-Building</h4>
-                                <p>Technical workshops and soft skills sessions for professional growth</p>
-                            </div>
-                            <div class="activity-card">
-                                <div class="activity-icon">🤝</div>
-                                <h4>Networking Meetups</h4>
-                                <p>Connect with professionals, alumni, and peers in the industry</p>
-                            </div>
-                            <div class="activity-card">
-                                <div class="activity-icon">👩‍🏫</div>
-                                <h4>Mentorship Programs</h4>
-                                <p>Guidance from experienced women engineers and leaders</p>
-                            </div>
-                            <div class="activity-card">
-                                <div class="activity-icon">🏗️</div>
-                                <h4>Engineering Projects</h4>
-                                <p>Collaborative hands-on projects that make a difference</p>
-                            </div>
-                        </div>
-                    </section>
+        <section id="mission">
+          <h2>Mission</h2>
+          <p>
+            To empower women in STEM through education, mentorship, inspiration, and leadership development.
+            The group strives to build confidence, strengthen technical skills, and encourage collaboration
+            across the engineering community.
+          </p>
+        </section>
 
-                    <section class="content-section">
-                        <h2>Major Events</h2>
-                        <div class="events-timeline">
-                            <div class="event-item">
-                                <div class="event-date">Throughout Year</div>
-                                <div class="event-details">
-                                    <h4>✨ Spotlight Sessions</h4>
-                                    <p>Featuring inspiring women in STEM sharing their journeys and insights</p>
-                                </div>
-                            </div>
-                            <div class="event-item">
-                                <div class="event-date">Every Semester</div>
-                                <div class="event-details">
-                                    <h4>🎀 WIE Networking Gatherings</h4>
-                                    <p>Special events like "Passports & Bracelets" to build community</p>
-                                </div>
-                            </div>
-                            <div class="event-item">
-                                <div class="event-date">Ongoing</div>
-                                <div class="event-details">
-                                    <h4>⚙️ Collaborative Engineering Projects</h4>
-                                    <p>Team projects that tackle real engineering challenges</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+        <section id="activities">
+          <h2>Workshops & Skill‑Building Sessions</h2>
+          <p>
+            WIE organizes hands-on sessions focused on technical growth, professional development,
+            and soft‑skill enhancement. These include:
+          </p>
+          <ul>
+            <li>Engineering software training (CAD, coding, simulations)</li>
+            <li>Career development workshops (CV building, interview prep)</li>
+            <li>Leadership and communication skill sessions</li>
+            <li>STEM outreach and collaborative learning activities</li>
+          </ul>
 
-                    <section class="content-section">
-                        <h2>Why Join WIE?</h2>
-                        <div class="benefits-grid">
-                            <div class="benefit-card">
-                                <div class="benefit-icon">🌟</div>
-                                <h4>Leadership Opportunities</h4>
-                                <p>Develop leadership skills through organizing events and initiatives</p>
-                            </div>
-                            <div class="benefit-card">
-                                <div class="benefit-icon">🌐</div>
-                                <h4>IEEE Network</h4>
-                                <p>Access to the global IEEE community and resources</p>
-                            </div>
-                            <div class="benefit-card">
-                                <div class="benefit-icon">💡</div>
-                                <h4>Skill Development</h4>
-                                <p>Technical and professional skills for career success</p>
-                            </div>
-                            <div class="benefit-card">
-                                <div class="benefit-icon">❤️</div>
-                                <h4>Supportive Community</h4>
-                                <p>A safe space to learn, grow, and succeed together</p>
-                            </div>
-                        </div>
-                    </section>
+          <h3>Networking & Mentorship</h3>
+          <p>
+            The club regularly hosts mentorship circles, alumni meetups, and networking gatherings to
+            connect students with women leaders in STEM across the UAE.
+          </p>
+        </section>
 
-                    <section class="content-section">
-                        <h2>Join Us</h2>
-                        <p>Ready to be part of the change? Join Women in Engineering and help shape the future of STEM!</p>
-                        <a href="index.html#contact" class="join-btn wie-btn">Get Involved →</a>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </main>
+        <section id="events">
+          <h2>Major Events</h2>
+          <ul>
+            <li><strong>Spotlight Sessions:</strong> Talks featuring women engineers and industry professionals.</li>
+            <li><strong>WIE Networking Gatherings:</strong> Community‑building meetups and alumni connections.</li>
+            <li><strong>Collaborative Engineering Projects:</strong> Team‑based initiatives encouraging skill growth and problem‑solving.</li>
+          </ul>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Clubs of RIT Dubai. All rights reserved.</p>
-            <p>Created by: Madheeha Sameen, Grishma Bhandari, Amina, Syed Zain, Daania</p>
-        </div>
-    </footer>
+        <section id="impact">
+          <h2>Impact</h2>
+          <p>
+            Through consistent engagement, WIE has strengthened the sense of belonging among women in STEM at
+            RIT Dubai. Members gain confidence, mentorship, and opportunities that help shape their academic
+            and professional journeys.
+          </p>
+        </section>
 
-    <script src="script.js"></script>
+        <section id="references" class="references" aria-labelledby="refs-heading">
+          <h3 id="refs-heading">References</h3>
+          <div>IEEE WIE Global Resources</div>
+          <div>RIT Dubai WIE LinkedIn Page</div>
+        </section>
+
+      </div>
+
+      <aside class="infobox" aria-label="Infobox about WIE RIT Dubai">
+        <h3>WIE — RIT Dubai</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/IEEE_logo.svg/512px-IEEE_logo.svg.png" alt="IEEE logo">
+
+        <div class="label">Type</div>
+        <div>IEEE Affinity Group (Women in Engineering)</div>
+
+        <div class="label">Focus</div>
+        <div>Empowerment, STEM education, community, leadership</div>
+
+        <div class="label">Activities</div>
+        <div>Workshops, networking, mentorship, outreach</div>
+
+        <div class="label">Major Events</div>
+        <div>Spotlight sessions, WIE networking, collaborative projects</div>
+
+        <div class="label">Social Media</div>
+        <div><a href="#">LinkedIn</a></div>
+      </aside>
+    </div>
+
+  </article>
 </body>
 </html>
