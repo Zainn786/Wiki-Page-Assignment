@@ -1,0 +1,631 @@
+/* Club Pages Specific Styles */
+
+/* Club Hero Section */
+.club-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem 4rem;
+    overflow: hidden;
+}
+
+.club-hero-content {
+    text-align: center;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.club-badge {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.club-hero h1 {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.club-tagline {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.club-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Hero Color Variations */
+.eawc-hero {
+    background: linear-gradient(135deg, #2E7D32 0%, #81C784 50%, #7A9B8E 100%);
+}
+
+.gdc-hero {
+    background: linear-gradient(135deg, #FF6B35 0%, #FFA500 50%, #FFD700 100%);
+}
+
+.airc-hero {
+    background: linear-gradient(135deg, #4A148C 0%, #7C4DFF 50%, #B388FF 100%);
+}
+
+.desi-hero {
+    background: linear-gradient(135deg, #FF6B9D 0%, #FFC048 50%, #FF8A65 100%);
+}
+
+.wie-hero {
+    background: linear-gradient(135deg, #AD1457 0%, #E91E63 50%, #FF69B4 100%);
+}
+
+/* Hero Wave */
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.hero-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+}
+
+.hero-wave path {
+    fill: #FFFFFF;
+}
+
+/* Main Content Layout */
+.club-main {
+    padding: 4rem 0;
+    background: #FFFFFF;
+}
+
+.club-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Sidebar */
+.club-sidebar {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.sidebar-card {
+    background: #F8F9FA;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-card h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #FF6B35;
+}
+
+.fact-list {
+    list-style: none;
+}
+
+.fact-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #E0E0E0;
+    color: #555;
+}
+
+.fact-list li:last-child {
+    border-bottom: none;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.social-btn {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.social-btn.instagram {
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+    color: white;
+}
+
+.social-btn.behance {
+    background: #1769FF;
+    color: white;
+}
+
+.social-btn.linkedin {
+    background: #0077B5;
+    color: white;
+}
+
+.social-btn.whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.social-btn.email {
+    background: #8B4513;
+    color: white;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-card {
+    background: linear-gradient(135deg, #7A9B8E, #A8C4BA);
+    color: white;
+}
+
+.highlight-card h3 {
+    color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.highlight-card.airc-highlight {
+    background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+}
+
+.highlight-card.desi-highlight {
+    background: linear-gradient(135deg, #FF6B9D, #FFC048);
+}
+
+.highlight-card.wie-highlight {
+    background: linear-gradient(135deg, #E91E63, #FF69B4);
+}
+
+.related-clubs {
+    list-style: none;
+}
+
+.related-clubs li {
+    padding: 0.5rem 0;
+}
+
+.related-clubs a {
+    color: #FF6B35;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.related-clubs a:hover {
+    color: #8B4513;
+    text-decoration: underline;
+}
+
+/* Main Content */
+.club-content {
+    min-width: 0;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.content-section:last-child {
+    border-bottom: none;
+}
+
+.content-section h2 {
+    color: #8B4513;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.content-section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #FF6B35, #FFA500);
+    border-radius: 2px;
+}
+
+.content-section p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+}
+
+/* Mission Box */
+.mission-box {
+    background: linear-gradient(135deg, #7A9B8E, #A8C4BA);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    box-shadow: 0 5px 20px rgba(122, 155, 142, 0.3);
+}
+
+.mission-box.gdc-mission {
+    background: linear-gradient(135deg, #FF6B35, #FFA500);
+}
+
+.mission-box.airc-mission {
+    background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+}
+
+.mission-box.desi-mission {
+    background: linear-gradient(135deg, #FF6B9D, #FFC048);
+}
+
+.mission-box.wie-mission {
+    background: linear-gradient(135deg, #E91E63, #FF69B4);
+}
+
+.mission-box p {
+    color: white;
+    margin: 0;
+}
+
+/* Activities Grid */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.activity-card {
+    background: #F8F9FA;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    border-color: #FF6B35;
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.15);
+}
+
+.activity-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.activity-card h4 {
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+}
+
+.activity-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Events Timeline */
+.events-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.events-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #FF6B35, #FFA500, #FFD700);
+    border-radius: 2px;
+}
+
+.event-item {
+    position: relative;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: #F8F9FA;
+    border-radius: 15px;
+    margin-left: 1rem;
+}
+
+.event-item::before {
+    content: '';
+    position: absolute;
+    left: -2.15rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background: #FF6B35;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px #FF6B35;
+}
+
+.event-date {
+    display: inline-block;
+    background: linear-gradient(135deg, #FF6B35, #FFA500);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.event-details h4 {
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+}
+
+.event-details p {
+    color: #666;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Tools Grid */
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tool-item {
+    background: linear-gradient(135deg, #FF6B35, #FFA500);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tool-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+.tech-grid .tool-item {
+    background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+}
+
+/* Special Features (Desi Club) */
+.special-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: #FFF9F0;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Benefits Grid (WIE) */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.benefit-card {
+    background: linear-gradient(135deg, #FFF0F5, #FFE4EC);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #FFB6C1;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    border-color: #E91E63;
+    box-shadow: 0 10px 30px rgba(233, 30, 99, 0.15);
+}
+
+.benefit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+    color: #AD1457;
+    margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Join Button */
+.join-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #7A9B8E, #5C7D6F);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(122, 155, 142, 0.3);
+}
+
+.join-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(122, 155, 142, 0.4);
+}
+
+.join-btn.gdc-btn {
+    background: linear-gradient(135deg, #FF6B35, #E65100);
+}
+
+.join-btn.airc-btn {
+    background: linear-gradient(135deg, #6C5CE7, #4A148C);
+}
+
+.join-btn.desi-btn {
+    background: linear-gradient(135deg, #FF6B9D, #E91E63);
+}
+
+.join-btn.wie-btn {
+    background: linear-gradient(135deg, #E91E63, #AD1457);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .club-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .club-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+    
+    .club-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .club-tagline {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .club-hero {
+        min-height: 50vh;
+        padding: 5rem 1rem 3rem;
+    }
+    
+    .club-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .club-badge {
+        font-size: 3.5rem;
+    }
+    
+    .club-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .activities-grid,
+    .benefits-grid,
+    .special-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .tools-grid {
+        justify-content: center;
+    }
+    
+    .club-sidebar {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .club-hero h1 {
+        font-size: 1.75rem;
+    }
+    
+    .club-tagline {
+        font-size: 1rem;
+    }
+    
+    .mission-box {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .event-item {
+        margin-left: 0.5rem;
+        padding: 1rem;
+    }
+}
