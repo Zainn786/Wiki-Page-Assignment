@@ -209,61 +209,47 @@ body {
     line-height: 1.7;
 }
 
+
 /* Wikipedia-style Club Sections */
 .wiki-club-section {
     background: var(--white);
-    margin-bottom: 3rem;
-    border-radius: 10px;
+    margin-bottom: 2.5rem;
+    border-radius: 4px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     border: 1px solid #E0E0E0;
 }
 
 .wiki-club-header {
-    padding: 1.5rem 2rem;
+    padding: 0.75rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
-}
-
-.wiki-club-title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.wiki-icon {
-    font-size: 2.5rem;
-}
-
-.wiki-club-title h3 {
-    color: white;
-    font-size: 2rem;
-    margin: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .wiki-category {
-    background: rgba(255, 255, 255, 0.3);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--wiki-text);
+    padding: 0.35rem 0.9rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
     font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .wiki-club-content {
-    padding: 2rem;
-    line-height: 1.8;
+    padding: 1.5rem;
+    line-height: 1.7;
 }
 
 .wiki-club-content h4 {
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--light-bg);
+    color: var(--wiki-text);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1.2rem;
+    margin-bottom: 0.6rem;
+    font-family: 'Georgia', serif;
 }
 
 .wiki-club-content h4:first-child {
@@ -271,18 +257,19 @@ body {
 }
 
 .wiki-club-content p {
-    color: #333;
+    color: var(--wiki-text);
     margin-bottom: 1rem;
+    line-height: 1.7;
 }
 
 .mission-text {
-    background: linear-gradient(135deg, var(--light-sage), var(--peach));
-    padding: 1.5rem;
+    background: #F0F7FF;
+    padding: 1rem 1.2rem;
     border-left: 4px solid var(--secondary-color);
-    border-radius: 5px;
+    border-radius: 3px;
     font-style: italic;
-    font-weight: 500;
-    color: var(--dark-text);
+    color: var(--wiki-text);
+    margin: 1rem 0;
 }
 
 .wiki-info-box {
@@ -290,15 +277,16 @@ body {
     width: 280px;
     margin: 0 0 1.5rem 1.5rem;
     background: #F8F9FA;
-    border: 1px solid #DDD;
-    border-radius: 8px;
+    border: 1px solid #A7D7F9;
+    border-radius: 4px;
     padding: 1rem;
 }
 
 .wiki-info-box h4 {
     margin-top: 0 !important;
-    border-bottom: 2px solid var(--secondary-color) !important;
-    font-size: 1.1rem;
+    border-bottom: 1px solid #A7D7F9 !important;
+    font-size: 1rem !important;
+    padding-bottom: 0.5rem;
 }
 
 .wiki-table {
@@ -317,86 +305,79 @@ body {
 
 .wiki-table td {
     padding: 0.5rem 0.25rem;
-    color: #555;
+    color: var(--wiki-text);
+    vertical-align: top;
 }
 
 .wiki-table td:first-child {
-    width: 40%;
+    width: 45%;
 }
 
 .wiki-list {
-    list-style: none;
-    padding-left: 0;
+    list-style: disc;
+    padding-left: 2rem;
+    margin: 0.5rem 0 1rem 0;
 }
 
 .wiki-list li {
-    padding: 0.5rem 0 0.5rem 1.5rem;
-    position: relative;
-    color: #333;
-}
-
-.wiki-list li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--secondary-color);
-    font-weight: bold;
-    font-size: 1.2rem;
+    padding: 0.25rem 0;
+    color: var(--wiki-text);
 }
 
 .tools-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    margin: 0.5rem 0;
 }
 
 .tool-tag {
-    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
-    color: white;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
+    background: #EAF3FF;
+    color: #0645AD;
+    padding: 0.35rem 0.9rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
     font-weight: 500;
     display: inline-block;
+    border: 1px solid #A7D7F9;
 }
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .category-item {
-    background: var(--light-bg);
-    padding: 1.5rem;
-    border-radius: 10px;
-    border-left: 4px solid var(--secondary-color);
-    transition: all 0.3s ease;
+    background: #F8F9FA;
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--secondary-color);
+    transition: all 0.2s ease;
 }
 
 .category-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: #EAF3FF;
 }
 
 .category-item h4 {
-    color: var(--primary-color);
-    margin: 0 0 0.5rem 0 !important;
+    color: var(--wiki-text);
+    margin: 0 0 0.4rem 0 !important;
     border: none !important;
     padding: 0 !important;
-    font-size: 1.1rem;
+    font-size: 1rem !important;
 }
 
 .category-item p {
-    color: #666;
+    color: #54595D;
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 /* Background colors for different clubs */
 .eawc-bg {
-    background: linear-gradient(135deg, #2E7D32 0%, #81C784 100%);
+    background: linear-gradient(135deg, #2E7D32 0%, #66BB6A 100%);
 }
 
 .gdc-bg {
@@ -419,30 +400,84 @@ body {
     background: linear-gradient(135deg, #34495E 0%, #5D6D7E 100%);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* References Section */
+.wiki-references {
+    background: #F8F9FA;
+    border: 1px solid #A7D7F9;
+    border-radius: 4px;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+}
+
+.wiki-references p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.wiki-references p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .wiki-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .wiki-toc {
+        position: relative;
+        top: 0;
+        max-height: none;
+    }
+    
     .wiki-info-box {
         float: none;
         width: 100%;
         margin: 0 0 1.5rem 0;
     }
-    
-    .wiki-club-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .wiki-page-title {
+        font-size: 1.6rem;
     }
     
-    .wiki-club-title h3 {
-        font-size: 1.5rem;
+    .wiki-section h2 {
+        font-size: 1.3rem;
     }
     
-    .wiki-icon {
-        font-size: 2rem;
+    .wiki-section h3 {
+        font-size: 1.1rem;
     }
     
     .category-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .wiki-layout {
+        padding: 10px;
+    }
+    
+    .wiki-content {
+        padding: 0 10px 20px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+    
+    .wiki-page-title {
+        font-size: 1.4rem;
+    }
+    
+    .wiki-section h2 {
+        font-size: 1.2rem;
+    }
+    
+    .wiki-title {
+        font-size: 1.2rem;
     }
 }
 
